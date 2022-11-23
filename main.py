@@ -21,8 +21,8 @@ from comtypes.client import GetActiveObject
 ps = GetActiveObject("PowerShape.Application")
 ps.Visible = True
 count = ps.evaluate('selection.number')
-dim_list_names = ps.evaluate('selection.name[0]')
-dimdim = int(dim_list_names)
+get_dim_names = ps.evaluate('selection.name[0]')
+dimdim = int(get_dim_names)
 
 
 dim_value = ps.evaluate(f'dimension[{dimdim}].value')
