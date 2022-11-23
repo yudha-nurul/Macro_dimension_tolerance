@@ -20,6 +20,14 @@ from comtypes.client import GetActiveObject
 
 ps = GetActiveObject("PowerShape.Application")
 ps.Visible = True
-jumlah = ps.evaluate('selection.number')
-ps.exec(f'print error {jumlah}')
+count = ps.evaluate('selection.number')
+dim_list_names = ps.evaluate('selection.name[0]')
+dimdim = int(dim_list_names)
 
+
+dim_value = ps.evaluate(f'dimension[{dimdim}].value')
+# print(type(dim_value))
+print(dim_value)
+# print(f'jumlahnya adalah {count}')
+# print(f'namanya adalah {dim_name}')
+# print(f'nilainya adalah {dim_value}')
