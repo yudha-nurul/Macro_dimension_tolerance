@@ -1,7 +1,7 @@
 """
 cara 1 :
 import pymsgbox
-import win32com.client
+# import win32com.client
 #powershape = win32com.client.Dispatch ("PowerShape.Application")
 ps = win32com.client.GetActiveObject ("PowerShape.Application")
 ps.Visible = True
@@ -14,20 +14,49 @@ pshape.Visible = True
 pshape.Exec('LEVEL FILTER USED_OFF')
 LEVEL_ON = pshape.Evaluate('level.filtered.number')
 pymsgbox.alert(LEVEL_ON)
+--------------
+# convert str to list
+print(a)
+print(len(a))
+print(type(a))
+a = a.replace("{", "")
+a = a.replace("}", "")
+print(a)
+b = a.split(';')
+print(b)
+print(len(b))
+print(type(b))
+----------------
 """
+
 from comtypes.client import GetActiveObject
 # import pymsgbox
 
 ps = GetActiveObject("PowerShape.Application")
 ps.Visible = True
-count = ps.evaluate('selection.number')
-get_dim_names = ps.evaluate('selection.name[0]')
-dimdim = int(get_dim_names)
 
+count = int(ps.evaluate('selection.number'))
+print(f'jumlah dimensi yang diselect adalah {count}')
 
-dim_value = ps.evaluate(f'dimension[{dimdim}].value')
+nama = (ps.evaluate('SELECTION.NAMES'))
+nama = nama.replace("{", "")
+nama = nama.replace("}", "")
+nama = nama.split(';')
+namanya = nama[:]
+print(nama)
+for i in nama:
+    print(f'ini adalah nilai dari dimensi {i}')
+    dim_value = ps.evaluate(f'dimension[{i}].value')
+    print(dim_value)
+
+# count = (f'selection.name[{count}]')
+# print(count)
+# get_dim_names = ps.evaluate(f'selection.name[{count}]')
+# get_dim_names = int(ps.evaluate(f'{count}'))
+# print(get_dim_names)
+# dim_value = ps.evaluate(f'dimension[{get_dim_names}].value')
 # print(type(dim_value))
-print(dim_value)
+# print(dim_value)
 # print(f'jumlahnya adalah {count}')
 # print(f'namanya adalah {dim_name}')
 # print(f'nilainya adalah {dim_value}')
