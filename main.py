@@ -28,12 +28,7 @@ print(len(b))
 print(type(b))
 ----------------
 """
-from comtypes.client import GetActiveObject
 from dim_tolerance import dim_tolerance_plusmin as plusmin
-# import pymsgbox
-ps = GetActiveObject("PowerShape.Application")
-ps.Visible = True
-
 if __name__ == '__main__':
     plusmin()
 

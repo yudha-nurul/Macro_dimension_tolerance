@@ -1,3 +1,7 @@
+from comtypes.client import GetActiveObject
+# import pymsgbox
+ps = GetActiveObject("PowerShape.Application")
+ps.Visible = True
 def dim_tolerance_plusmin():
     count = int(ps.evaluate('selection.number'))
     print(f'jumlah dimensi yang diselect adalah {count}')
@@ -6,7 +10,6 @@ def dim_tolerance_plusmin():
     nama = nama.replace("{", "")
     nama = nama.replace("}", "")
     nama = nama.split(';')
-    namanya = nama[:]
     print(nama)
     for i in nama:
         print(f'ini adalah nilai dari dimensi {i}')
@@ -14,6 +17,8 @@ def dim_tolerance_plusmin():
         print(dim_value)
 
         if 0 < dim_value & dim_value <= 3:
+            print(dim_value)
+        """    
         DIALOG TOLEDIT
         TOLVALUE1 0.01
         TOLVALUE2 -0.01
@@ -125,3 +130,4 @@ def dim_tolerance_plusmin():
         TOOLBAR
         DIMATTRIBUTES
         DISMISS
+        """
