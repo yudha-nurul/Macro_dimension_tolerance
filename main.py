@@ -28,26 +28,14 @@ print(len(b))
 print(type(b))
 ----------------
 """
-
 from comtypes.client import GetActiveObject
+from dim_tolerance import dim_tolerance_plusmin as plusmin
 # import pymsgbox
-
 ps = GetActiveObject("PowerShape.Application")
 ps.Visible = True
 
-count = int(ps.evaluate('selection.number'))
-print(f'jumlah dimensi yang diselect adalah {count}')
-
-nama = (ps.evaluate('SELECTION.NAMES'))
-nama = nama.replace("{", "")
-nama = nama.replace("}", "")
-nama = nama.split(';')
-namanya = nama[:]
-print(nama)
-for i in nama:
-    print(f'ini adalah nilai dari dimensi {i}')
-    dim_value = ps.evaluate(f'dimension[{i}].value')
-    print(dim_value)
+if __name__ == '__main__':
+    plusmin()
 
 # count = (f'selection.name[{count}]')
 # print(count)
