@@ -28,9 +28,14 @@ print(len(b))
 print(type(b))
 ----------------
 """
-from dim_tolerance import dim_tolerance_plusmin as plusmin
+import sys
+
+from dim_tolerance import dim_tolerance_plusmin as plusmin, run_plusmin
+import json
+
 if __name__ == '__main__':
     plusmin()
+    run_plusmin()
 
 # count = (f'selection.name[{count}]')
 # print(count)

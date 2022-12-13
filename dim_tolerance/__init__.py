@@ -1,5 +1,6 @@
 from comtypes.client import GetActiveObject
 import sys
+from contextlib import redirect_stdout
 
 # import pymsgbox
 ps = GetActiveObject("PowerShape.Application")
@@ -92,6 +93,11 @@ def dim_tolerance_plusmin():
             print('TOLVALUE2 - 0.063')
             print('TOOLBAR DIMATTRIBUTES DISMISS')
         print('select clearlist')
+def run_plusmin():
+    with open('run.mac', 'w') as file:
+        with redirect_stdout(file):
+            run = f'awalnya {dim_tolerance_plusmin()} ini'
+            run
 
 
 """
