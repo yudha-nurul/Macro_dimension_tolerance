@@ -1,4 +1,5 @@
 from comtypes.client import GetActiveObject
+import sys
 
 # import pymsgbox
 ps = GetActiveObject("PowerShape.Application")
@@ -6,7 +7,10 @@ ps.Visible = True
 
 
 def dim_tolerance_plusmin():
-    # count = int(ps.evaluate('selection.number'))
+    count = int(ps.evaluate('selection.number'))
+    if count == 0:
+        print('select at leas 1 dimension')
+        sys.exit()
     # print(f'jumlah dimensi yang diselect adalah {count}')
 
     nama = (ps.evaluate('SELECTION.NAMES'))
@@ -88,6 +92,7 @@ def dim_tolerance_plusmin():
             print('TOLVALUE2 - 0.063')
             print('TOOLBAR DIMATTRIBUTES DISMISS')
         print('select clearlist')
+
 
 """
 -----------------------------------------------
