@@ -1,5 +1,6 @@
 from comtypes.client import GetActiveObject
 import sys
+import os
 from contextlib import redirect_stdout
 
 # import pymsgbox
@@ -93,11 +94,16 @@ def dim_tolerance_plusmin():
             print('TOLVALUE2 - 0.063')
             print('TOOLBAR DIMATTRIBUTES DISMISS')
         print('select clearlist')
+
+
 def run_plusmin():
-    with open('run.mac', 'w') as file:
+    cwd = os.getcwd()
+    with open('go.mac', 'w') as file:
         with redirect_stdout(file):
-            run = f'awalnya {dim_tolerance_plusmin()} ini'
+            run = f'{dim_tolerance_plusmin()}'
             run
+    assert isinstance(ps, object)
+    ps.exec(f'MACRO RUN "{cwd}\go.mac"')
 
 
 """
