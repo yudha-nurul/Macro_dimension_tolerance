@@ -1,0 +1,56 @@
+select clearlist
+add dimension "8"
+DIALOG TOLEDIT
+TOLVALUE1 0.03
+TOLVALUE2 - 0.03
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
+select clearlist
+add dimension "9"
+DIALOG TOLEDIT
+TOLVALUE1 0.035
+TOLVALUE2 - 0.035
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
+select clearlist
+add dimension "10"
+DIALOG TOLEDIT
+TOLVALUE1 0.035
+TOLVALUE2 - 0.035
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
+select clearlist
+add dimension "11"
+DIALOG TOLEDIT
+TOLVALUE1 0.04
+TOLVALUE2 - 0.04
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
+select clearlist
+add dimension "12"
+DIALOG TOLEDIT
+TOLVALUE1 0.04
+TOLVALUE2 - 0.04
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
+select clearlist
+add dimension "13"
+DIALOG TOLEDIT
+TOLVALUE1 0.046
+TOLVALUE2 - 0.046
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
+select clearlist
+add dimension "14"
+DIALOG TOLEDIT
+TOLVALUE1 0.046
+TOLVALUE2 - 0.046
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
+select clearlist
+add dimension "15"
+DIALOG TOLEDIT
+TOLVALUE1 0.046
+TOLVALUE2 - 0.046
+TOOLBAR DIMATTRIBUTES DISMISS
+select clearlist
