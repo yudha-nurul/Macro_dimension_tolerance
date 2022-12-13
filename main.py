@@ -30,11 +30,11 @@ print(type(b))
 """
 import sys
 
-from dim_tolerance import dim_tolerance_plusmin as plusmin, run_plusmin
+from dim_tolerance import dim_tolerance_plusmin as plusmin, go_plusmin
 
 if __name__ == '__main__':
     # plusmin()
-    run_plusmin()
+    go_plusmin()
 
 
 # count = (f'selection.name[{count}]')
