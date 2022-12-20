@@ -1,12 +1,12 @@
-from comtypes.client import GetActiveObject
+# from comtypes.client import GetActiveObject
 import sys
 import os
 from contextlib import redirect_stdout
 
 # import pymsgbox
-ps = GetActiveObject("PowerShape.Application")
+import win32com.client
+ps = win32com.client.Dispatch("PowerShape.Application")
 ps.Visible = True
-
 
 def dim_tolerance_plusmin():
     count = int(ps.evaluate('selection.number'))

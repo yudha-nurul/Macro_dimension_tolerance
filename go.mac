@@ -1,11 +1,4 @@
 select clearlist
-add dimension "7"
-DIALOG TOLEDIT
-TOLVALUE1 0.018
-TOLVALUE2 - 0.018
-TOOLBAR DIMATTRIBUTES DISMISS
-select clearlist
-select clearlist
 add dimension "8"
 DIALOG TOLEDIT
 TOLVALUE1 0.03
